@@ -651,8 +651,8 @@ Each compliant CRI implementation must:
 
 Below is the proposed strategy for doing so:
 
-1. The Alpha release will focus solely on `/stats/summary` endpoint, and `/metrics/cadvisor` support will follow in Beta.
-2. For the Beta release, add initial support for CRI implementations to report these metrics
+1. The Alpha release will add support for both `/stats/summary` endpoint and `/metrics/cadvisor` endpoint.
+2. For the Beta release, add support for CRI implementations to report these metrics
     - Initial research on the set of metrics required should be done. This will, possibly, allow the community to declare metrics that are not required to be moved to the CRI implementations.
     - Testing on how performant cAdvisor+Kubelet are today should be done, to find a target, acceptable threshold of performance for the CRI implementations
     - Creation of tests verifying the metrics are reported correctly should be created and verified with the existing cAdvisor implementation.
@@ -1055,6 +1055,8 @@ _This section must be completed when targeting beta graduation to a release._
 2022-01-25: KEP targeted at Beta in 1.24
 2022-04-20: KEP deemed not ready for Beta in 1.24
 2022-06-13: Move some Beta criteria to Alpha criteria in 1.25
+2022-12-09: Retarget KEP to alpha in 1.26
+2022-01-23: KEP targeted at Beta in 1.27
 
 ## Drawbacks
 
